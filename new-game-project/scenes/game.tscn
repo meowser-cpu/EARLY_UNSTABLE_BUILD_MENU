@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://elst0xn32iil"]
+
+[ext_resource type="Script" uid="uid://dy5yakpks2fmt" path="res://script/game.gd" id="1_iywne"]
+[ext_resource type="AudioStream" uid="uid://blhpdthhdtdoc" path="res://bus/menu.ogg" id="2_p57ef"]
+[ext_resource type="PackedScene" uid="uid://n6vp3w5kemky" path="res://scenes/texture_button.tscn" id="3_gee14"]
+[ext_resource type="Script" uid="uid://b1jodw6s1j7ei" path="res://script/button_manager.gd" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://bmxpvw37hc7s1" path="res://scenes/options.tscn" id="4_gee14"]
+[ext_resource type="PackedScene" uid="uid://d4cyoo0ocp4k7" path="res://scenes/exit.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://hgadbk5g0lml" path="res://script/texture_button.gd" id="5_u5sy4"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jphu4"]
+lifetime_randomness = 1.0
+particle_flag_align_y = true
+particle_flag_inherit_emitter_scale = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+use_rotation_3d = true
+rotation_3d_min = Vector3(0, 0, 0)
+rotation_3d_max = Vector3(0, 0, 0)
+inherit_velocity_ratio = 106.19
+spread = 21.685
+flatness = 1.0
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+orbit_velocity_min = 1.9790002
+orbit_velocity_max = 2.0000002
+radial_velocity_min = 258.05997
+radial_velocity_max = 430.09998
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 99.99999
+linear_accel_max = 99.99999
+radial_accel_min = 99.99999
+radial_accel_max = 99.99999
+tangential_accel_min = 99.99999
+tangential_accel_max = 99.99999
+scale_over_velocity_min = 419.34998
+scale_over_velocity_max = 419.34998
+color = Color(0, 1, 1, 1)
+anim_speed_min = 16.0
+anim_speed_max = 16.0
+anim_offset_max = 1.0
+sub_emitter_mode = 1
+sub_emitter_frequency = 30.05
+sub_emitter_keep_velocity = true
+
+[node name="Game" type="Node2D" unique_id=1293195918]
+position = Vector2(760, 54)
+script = ExtResource("1_iywne")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1364556674]
+position = Vector2(1, 0)
+zoom = Vector2(6, 6)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Camera2D" unique_id=332057664]
+position = Vector2(-85.49005, 2.9891322)
+scale = Vector2(1.9045628, 1.3134056)
+amount = 105
+amount_ratio = 0.25
+lifetime = 1.49
+speed_scale = 6.34
+explosiveness = 0.06
+local_coords = true
+draw_order = 0
+trail_enabled = true
+trail_lifetime = 0.67
+process_material = SubResource("ParticleProcessMaterial_jphu4")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=34583953]
+current = true
+
+[node name="Menu" type="AudioStreamPlayer" parent="AudioListener2D" unique_id=420967778]
+stream = ExtResource("2_p57ef")
+autoplay = true
+
+[node name="Button_manager" type="Control" parent="." unique_id=117912445]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -54.5
+offset_right = 96.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_p57ef")
+
+[node name="TextureButton" parent="Button_manager" unique_id=1725602591 instance=ExtResource("3_gee14")]
+layout_mode = 1
+offset_transform_enabled = true
+script = ExtResource("5_u5sy4")
+
+[node name="Options" parent="Button_manager" unique_id=1363516057 instance=ExtResource("4_gee14")]
+layout_mode = 1
+anchor_top = 0.37600002
+anchor_right = 0.83900005
+anchor_bottom = 0.569
+offset_top = 0.01599884
+offset_right = -0.088012695
+offset_bottom = -0.020999908
+offset_transform_enabled = true
+
+[node name="Exit" parent="Button_manager" unique_id=2124802178 instance=ExtResource("5_iywne")]
+layout_mode = 1
+anchor_top = 0.651
+anchor_right = 0.83900005
+anchor_bottom = 0.84400004
+offset_top = 0.041000366
+offset_right = -0.088012695
+offset_bottom = 0.0039978027
+offset_transform_enabled = true
+
+[connection signal="pressed" from="Button_manager/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Exit" to="." method="_on_exit_pressed"]
