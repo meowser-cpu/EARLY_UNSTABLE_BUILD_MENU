@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhg62jx4r22tl"]
+
+[ext_resource type="Script" uid="uid://b1imrkov60ws4" path="res://Script/screen.gd" id="1_1rpfr"]
+
+[sub_resource type="Gradient" id="Gradient_3o8hx"]
+offsets = PackedFloat32Array(0, 0.9876543)
+colors = PackedColorArray(0, 0, 1, 1, 0, 0.40784314, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a8pro"]
+gradient = SubResource("Gradient_3o8hx")
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1rpfr")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_a8pro")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_right = -3.0
+offset_bottom = 0.29595947
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.246
+anchor_right = 1.003
+anchor_bottom = 0.386
+offset_left = 0.9129944
+offset_top = -0.16200256
+offset_right = 1.6329346
+offset_bottom = 0.2579956
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36100003
+anchor_top = 0.41300002
+anchor_right = 1.0
+anchor_bottom = 0.559
+offset_left = 0.21096802
+offset_top = -0.21099854
+offset_right = 2.0830078
+offset_bottom = 0.18103027
+
+[node name="Button3" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35500002
+anchor_top = 0.628
+anchor_right = 1.0
+anchor_bottom = 0.763
+offset_left = 1.1049805
+offset_top = 0.6839905
+offset_right = 1.0649414
+offset_bottom = 0.3390503
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.075001
+anchor_top = 6.932
+anchor_right = 14.075001
+anchor_bottom = 6.932
+offset_left = -16355.326
+offset_top = -4674.936
+offset_right = -15009.326
+offset_bottom = -4544.936
+color = Color(0.1764706, 0.1882353, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.150001
+anchor_top = 6.675
+anchor_right = 14.150001
+anchor_bottom = 6.675
+offset_left = -16440.65
+offset_top = -4375.4
+offset_right = -15093.65
+offset_bottom = -4248.4
+color = Color(0.1764706, 0.1882353, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.137001
+anchor_top = 7.2620006
+anchor_right = 14.137001
+anchor_bottom = 7.3580003
+offset_left = -16425.688
+offset_top = -4625.7764
+offset_right = -15077.688
+offset_bottom = -4552.9844
+color = Color(0.17719328, 0.18898728, 1, 1)
+
+[connection signal="item_rect_changed" from="." to="." method="_on_item_rect_changed"]
