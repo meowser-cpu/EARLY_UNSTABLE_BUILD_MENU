@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://chykqfu21lyb3"]
-
-[node name="Start" type="TextureButton" unique_id=522844162]
-offset_right = 40.0
-offset_bottom = 40.0
