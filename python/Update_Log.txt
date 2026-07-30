@@ -9,7 +9,7 @@
                                             *
 ascii art by blitz&waves                    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-added filessupport_beta.py
+added filesupport_beta.py
 added Credits.txt
 added Update_Log.txt
 added descriptions listing lines it's talking with the Testing.py file
