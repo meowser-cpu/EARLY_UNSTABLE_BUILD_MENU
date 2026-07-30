@@ -1,0 +1,15 @@
+- EARLY BUILD 0.0000000000000014 -
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ _                                        ______
+||_|   |  |===== ||      ||       ||     |!!!!!!|       
+| |_|  |  |       ||   || ||     ||      |!!!!!!|                  
+|  |_| |  |=====   || ||   ||   ||        ======    
+|   |_||  |        || |    || ||            *
+|    |_|  |=====    ||       ||           *    *
+                                            *
+ascii art by blitz&waves                    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+added filessupport_beta.py
+added Credits.txt
+added Update_Log.txt
+added descriptions listing lines it's talking with the Testing.py file
