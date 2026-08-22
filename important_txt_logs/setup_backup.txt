@@ -1,0 +1,49 @@
+This will show how all the code is linked if you are missing any files this will be a way for you to recover any missing files like folders
+So here are all the files currently if these aren't displayed right please contact:blitzwaves4@gmail.com immdentally something went wrong while installing
+so the files are currently this:
+python
+    -------
+    __pyache__
+        audio_fx.cpython-314.pyc
+        filesupport_beta.cpython.pyc
+        songs.cpython-314.pyc
+        synth.cpython-314.pyc
+        Test_Unstable.cpython-314.pyc
+        Typing.cpython
+        Unstable_build.cpython-314.pyc
+    (.vscode recmmond to be remove if your planning on coding)
+    -------
+    .vscode
+        settings.json
+    -------
+    MSPAIN
+        0.jpg
+        1.jpg
+        2.jpg
+    -------
+    audiofiles
+        a1.wav
+        a1s.wav
+        b1.wav
+        beat.wav
+        c1.wav
+        c2.wav
+        d1.wav
+        d1s.wav
+        e1.wav
+        f1.wav
+        f1s.wav
+        g1.wav
+        g1s.wav
+    -------
+    script
+        songs.py
+        synth.py
+        Test_Unstable.py
+        jpg_files.py
+        Typing.py
+    --------
+    icon.png
+    Testing.py
+    -------
+If you get ever get confused on the file location or have an idea feel free to ask!
