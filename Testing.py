@@ -114,8 +114,10 @@ def update_music():
             print("check files songs.py and Testing.py")
             print("--------------------")
         print("0 is wait, 1 is square, 2 is sine, 3 is audio file")
-        
-
+#THIS IS REALLY UNSTABLE please use with caution!
+def playlist_choice(play, loop,switch):
+    loop=False
+    play_random_song(play, loop,switch)
 
 # ==========================================
 # 3. THE MAIN GAME LOOP
@@ -134,7 +136,7 @@ play_song(test_song, loop=False)
 # (If you imported calm_playlist at the top, you can do this instead:)
 # plays if test_song going good.
 
-play_random_song(calm_playlist, loop=True)
+
 
 
 running = True
