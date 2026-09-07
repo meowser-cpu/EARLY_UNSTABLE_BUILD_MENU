@@ -4,7 +4,7 @@ from script.Typing import Tone
 import math
 
 # NOTE: If you have your songs.py file working, uncomment the line below!
-from script.songs import calm_playlist 
+from script.songs import calm_playlist, test_playlist
 
 # ==========================================
 # 1. SETUP & VARIABLES
@@ -29,7 +29,7 @@ current_song = None
 current_note = 0
 next_note_time = 0
 loop_current_song = True 
-
+Switch = 1
 active_freq = 0        
 note_end_time = 0      
 circle_y = 550   
@@ -115,9 +115,16 @@ def update_music():
             print("--------------------")
         print("0 is wait, 1 is square, 2 is sine, 3 is audio file")
 #THIS IS REALLY UNSTABLE please use with caution!
-def playlist_choice(play, loop,switch):
-    loop=False
-    play_random_song(play, loop,switch)
+def playlist_choice(play, loop, switch, conforming_switch):
+    """Selects a single song allowing: random_song is unfunctional in changeing so this a support function for it."""
+    play_random_song(play, loop),
+    if current_song == None:
+        print("Song has ended")
+        print("now updating")
+        if conforming_switch == 1:
+            current_song == switch
+            play_song(switch, loop),
+            print("CHECK"+"\n")
 
 # ==========================================
 # 3. THE MAIN GAME LOOP
@@ -130,6 +137,12 @@ test_song = [
 #known error without a patch currently
 #play_song forces test_song to play ONLY
 play_song(test_song, loop=False)
+
+#Please note that calm_playlist goes through while test_playlist is ignored
+#Data does exist while printing so there is possible chance of this working
+
+playlist_choice(calm_playlist,loop=False, switch=test_playlist, conforming_switch=1)
+
 
 
 
