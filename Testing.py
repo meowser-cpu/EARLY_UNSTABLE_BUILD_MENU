@@ -139,7 +139,8 @@ test_song = [
 play_song(test_song, loop=False)
 
 #Please note that calm_playlist goes through while test_playlist is ignored
-#Data does exist while printing so there is possible chance of this working
+#So basicly what this logic does is if a playlist fails to load you can force a song as a backup.
+#So you could have like one playlist as a focus
 
 playlist_choice(calm_playlist,loop=False, switch=test_playlist, conforming_switch=1)
 
